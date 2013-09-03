@@ -1,6 +1,8 @@
-meal = float(raw_input("What is the cost of your meal before tip? $"))
-tax = float(raw_input("What percentage of tax do you owe? "))/100
-tip = float(raw_input("What percent should you pay for your tip? "))/100
+import sys
+
+meal = float(sys.argv[1])
+tax = float(sys.argv[2])/100
+tip = float(sys.argv[3])/100
 tax_value = meal * tax
 meal_with_tax = meal + meal * tax
 tip_value = meal_with_tax * tip
